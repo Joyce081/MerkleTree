@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/merkle?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
+
+  mail:
+    host: smtp.qq.com  # QQ邮箱SMTP服务器
+    port: 587
+    username: XXXXXXXXX@qq.com  # QQ邮箱
+    password: XXXXXXXXXXXXXX  # QQ邮箱授权码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      timeout: 10s
+
+mybatis-plus:
+  type-handlers-package: com.example.merkletree.handler # 指定处理器所在包
